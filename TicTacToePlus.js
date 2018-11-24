@@ -27,11 +27,11 @@ let displayArray = [];
 for (let i = 1; i <= totalSquares; i++) {
   mainArray.push('');
   if (i < 10) {
-  	displayArray.push(` ${i} `);
+  	displayArray.push(` \x1b[2m${i}\x1b[0m `);
   } else if (i < 100) {
-  	displayArray.push(` ${i}`);
+  	displayArray.push(` \x1b[2m${i}\x1b[0m`);
   } else {
-  	displayArray.push(`${i}`);
+  	displayArray.push(`\x1b[2m${i}\x1b[0m`);
   }
 }
 
@@ -52,7 +52,7 @@ for (let i = 1; i <= numRows; i++) {
 
 
 function displayBoard(displayArray, numRows, totalSquares, fillerRow) {
-
+	console.log('\033c\033[3J');
 	for (let i = 0; i <= totalSquares - numRows; i += numRows) {
 		let displayRow = '';
 		for (let j = 0; j <= numRows - 1; j++) {
