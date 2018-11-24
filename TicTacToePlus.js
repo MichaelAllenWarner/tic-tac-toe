@@ -25,14 +25,14 @@ let mainArray = [];
 let displayArray = [];
 
 for (let i = 1; i <= totalSquares; i++) {
-  mainArray.push('');
-  if (i < 10) {
-  	displayArray.push(` \x1b[2m${i}\x1b[0m `);
-  } else if (i < 100) {
-  	displayArray.push(` \x1b[2m${i}\x1b[0m`);
-  } else {
-  	displayArray.push(`\x1b[2m${i}\x1b[0m`);
-  }
+	mainArray.push('');
+	if (i < 10) {
+		displayArray.push(` \x1b[2m${i}\x1b[0m `);
+	} else if (i < 100) {
+		displayArray.push(` \x1b[2m${i}\x1b[0m`);
+	} else {
+		displayArray.push(`\x1b[2m${i}\x1b[0m`);
+	}
 }
 
 
@@ -136,15 +136,15 @@ for (let turnsTaken = 0; ; turnsTaken++) {
 
 	displayBoard(displayArray, numRows, totalSquares, fillerRow);
 
-  if (turnsTaken >= (2*numRows) - 1) { // there might be a winner
-    winner = winnerChecker(mainArray, numRows, totalSquares);
-      if (winner) { // there's a winner
-        break;
-      }
-  }
-  if (turnsTaken === totalSquares) { // tie game (board is full, no winner)
-    break;
-  }
+	if (turnsTaken >= (2*numRows) - 1) { // there might be a winner
+		winner = winnerChecker(mainArray, numRows, totalSquares);
+			if (winner) { // there's a winner
+				break;
+			}
+	}
+	if (turnsTaken === totalSquares) { // tie game (board is full, no winner)
+		break;
+	}
 
 	let playerTurn = (turnsTaken % 2 === 0) ? '1' : '2';
 	let marker = (playerTurn === '1') ? 'X' : 'O';
