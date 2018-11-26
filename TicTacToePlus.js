@@ -1,5 +1,6 @@
 const readlineSync = require('./node_modules/readline-sync');
 
+process.stdout.write('\033c\033[3J');
 
 // user sets size of board
 
@@ -52,7 +53,7 @@ for (let i = 1; i <= numRows; i++) {
 
 
 function displayBoard(displayArray, numRows, totalSquares, fillerRow) {
-	console.log('\033c\033[3J');
+	process.stdout.write('\033c\033[3J');
 	for (let i = 0; i <= totalSquares - numRows; i += numRows) {
 		let displayRow = '';
 		for (let j = 0; j <= numRows - 1; j++) {
