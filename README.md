@@ -1,0 +1,1 @@
+This was my first real JavaScript project. It's a Tic-Tac-Toe game for the Node REPL. Actually, it's two Tic-Tac-Toe games: TicTacToe.js is the "normal" game, while TicTacToePlus.js prompts you to choose a board-size before the game starts.
